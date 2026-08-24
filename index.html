@@ -1,0 +1,2494 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Нейродвиж — центр когнитивного развития</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        /* ================================================================ */
+        /* ПЕРЕМЕННЫЕ                                                      */
+        /* ================================================================ */
+        :root {
+            --logo-url: url('https://sun9-77.vkuserphoto.ru/s/v1/ig2/1zvUF0Bl-WQ8UGO4GHxi4MUSynulphOYjqPdgOJf5Z2ecTo3gt4JE8pOZBEJx23xXCs2ky_KM1wBI5ZsoMBOoIGl.jpg?quality=95&as=32x69,48x104,72x156,108x234,160x346,240x519,360x779,480x1039,540x1169,640x1385,720x1558,1080x2337,1170x2532&from=bu&u=O11yUmAaNqH93-M3VA4g_YHq5rbH9vIu5et7UPL4O7U&cs=1170x0');
+            
+            --team-photo-url: url('https://sun9-51.vkuserphoto.ru/s/v1/ig2/UkByEXDsSTQKN0O8uVAnwpPhrdbEQ2FN0Pwji7O5mGjueU9LDhZyGI9DeVHLRG6xyrmj4oxIAF2beQQsHVIIs42n.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=SKO9CFJ3yAcsM5omAm8SQuOPlOPdki3DeQXl4EKfRO8&cs=1080x0');
+            
+            /* --- ФОТО СОТРУДНИКОВ (ИСПРАВЛЕНЫ) --- */
+            --staff-photo-1: url('https://sun9-24.vkuserphoto.ru/s/v1/ig2/K1ckuSY_2GH8LMk7QWgmNS2lgx0kma7QSu_iy--OxjIZLV6YRRVddbUXDb4Owv_bpfwuX8-q97hKAr1_rQHMWb76.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x107,240x160,360x240,480x320,540x360,640x427,720x480,1080x720&from=bu&u=-_s-LYa-rXtFij1cmFTUAmqsn1lB4hhSMpOIlzcSuvk&cs=1080x0');
+            --staff-photo-2: url('https://sun9-55.vkuserphoto.ru/s/v1/ig2/cdzjW4nuN_gj-J7KQ387nCOaoaTQvxVrqxAwBsI1y_nnrW_vtGwVZuV_HFpFww-eHL19VbkLcD865rjCg71oANoT.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x360,360x540,480x720,540x810,640x960,720x1080,853x1280&from=bu&cs=853x0');
+            --staff-photo-3: url('https://sun9-51.vkuserphoto.ru/s/v1/ig2/aljciZOWqNuBdjDg2aPnA103SX4ZWj6vcBS5ldTjSN7cu7NVbMPrLySrb0-XLv4Q-hxXgf3H7fTuozOeJX_zkdFE.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,960x1280&from=bu&cs=960x0');
+            --staff-photo-4: url('https://sun9-19.vkuserphoto.ru/s/v1/ig2/N7LCl1CHpgBBLngasL6Sm1aHMVuzs1E58DZUacTz3S2kGGmSzsdBDBhjUgvhhcHB28kwU9ezyz_F_i8hBMCzDe6E.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x361,360x541,480x721,540x811,640x961,720x1082,852x1280&from=bu&u=i0idtAjJ8ztKjJzy6rVMBu2QKyhw_30cRIrNSdh7MEI&cs=852x0');
+            --staff-photo-5: url('https://sun9-36.vkuserphoto.ru/s/v1/ig2/Ms3yr3kPzMcPgUNCCFQLDll9xiivEqihzSB2QwAYOBPydtrpYQT6b8sjPTlstFDUNwSr729TSYtzppH_1QKrtULx.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x360,360x540,480x720,540x810,640x960,720x1080,1080x1621,1280x1921,1440x2161,1706x2560&from=bu&u=a5Hr-npLWH72dc9svxnI02PuRKNjNoEUwOIj5hTVW_c&cs=1706x0');
+            --staff-photo-6: url('https://sun9-87.vkuserphoto.ru/s/v1/ig2/xghkOYHR0bUV0AKysPCxfagI83q3kTToBmAXdLN6dOQg3y0FSRcO_S7OdWZo7RgUlzBAgpzNLTCEJinyQHMxLqSM.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x360,360x540,480x720,540x810,640x960,720x1080,1080x1621,1280x1921,1440x2161,1706x2560&from=bu&u=p0V4aiQaoljxHkGCihnUcBzF6Aot47_61k7XsSfALwA&cs=1706x0');
+             --staff-photo-7: url('https://sun9-5.vkuserphoto.ru/s/v1/ig2/2ehienIIqzR_2sADmc0uURQ7oOAUrUkqiVVZx278tVpz4BrBYoMyoZEqQuvcwQ3ybvAV1PrAaycvGImV-BZI3gtd.jpg?quality=95&crop=0,149,1078,1617&as=32x48,48x72,72x108,108x162,160x240,240x360,360x540,480x720,540x810,640x960,720x1080,1078x1617&from=bu&u=gwyg1RTe9Y1KhcVJPoZ9q567Ytd8XzTESbeAyNxOltA&cs=1078x0');
+              --staff-photo-8: url('https://sun9-83.vkuserphoto.ru/s/v1/ig2/5Yd3rfPjA-bmsrg_FuRCNpSYdfexTWqTHuQAVOzqAZXH29Fb1WPl5BBNUcKOY1eJYnf7pgk1Kst8G3E2mBgNSOWg.jpg?quality=95&as=32x69,48x104,72x156,108x234,160x346,240x519,360x779,480x1039,540x1169,640x1385,720x1558,1080x2337,1170x2532&from=bu&u=xRzZivy33WeJ2CiUiMOokiVaNRZz_IAW1sLactkbn_o&cs=1170x0');
+            
+            /* --- ФОТО ДЛЯ СЛАЙДЕРА В HERO--- */
+            --slide-1: url('https://sun9-5.vkuserphoto.ru/s/v1/ig2/qAsLwhqaVW3nqZE9SiDkjKoLZsTgrQd4c9auJ9OcBUxHsnBg1NucbENaNFEtX0HyVy_XTCrMWVSZAo76Q9FiuRse.jpg?quality=95&crop=0,0,928,1152&as=32x40,48x60,72x89,108x134,160x199,240x298,360x447,480x596,540x670,640x794,720x894,928x1152&from=bu&u=2RapflK-yh91ivCs1mpTCNaZJAL30MqnHLzCgP4hNOA&cs=928x0');
+            --slide-2: url('https://sun9-29.vkuserphoto.ru/s/v1/ig2/hiPk9NOXG5llCTYOL6rSXyQrEza1_P5GcDXltWagXugXGO_tRyVZ3xSVNkg8GpWseYhMueB6ZjQam_iWHmQbDx-r.jpg?quality=95&crop=0,0,880,1168&as=32x42,48x64,72x96,108x143,160x212,240x319,360x478,480x637,540x717,640x849,720x956,880x1168&from=bu&u=3WzxfTIPIAz9w0aDaWRcNmfDGOOg3jxjFnaUipJdByU&cs=880x0');
+            --slide-3: url('https://sun9-31.vkuserphoto.ru/s/v1/ig2/gGy1GySf3WEMUAyBz1Eyzup3tRJRpDfl7N0jTTaI2g5w3ruV0rSiABsYgg-uE6ZHhaTfFeqlj04QXU9MewScL4Md.jpg?quality=95&crop=0,0,1024,1024&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1024x1024&from=bu&u=lasT_bGXl_0Hh86k43_hPWDXupH0KGWgxylxIlN_CK8&cs=640x0');
+            --slide-4: url('https://sun9-7.vkuserphoto.ru/s/v1/ig2/t6fFFZiVk9RmeNO7XJ41ECVbnryMYikWIt0olMpzfa4MUQEQGWFLfco1XVOP3HpH-SMr_UbmnZWEJzShBkV5x95H.jpg?quality=95&crop=0,0,591,827&as=32x45,48x67,72x101,108x151,160x224,240x336,360x504,480x672,540x756,591x827&from=bu&u=K7_yb-wQEpDjMocb_CXp2GspBAbQ0yY1RT-QGSukwhU&cs=591x0');
+            
+            
+            --bg-primary: #FAFAD2;
+            --bg-secondary: #f5f7fa;
+            --bg-card: rgba(255, 255, 255, 0.7);
+            --bg-glass: rgba(255, 255, 255, 0.3);
+            --text-primary: #0a0a1a;
+            --text-secondary: #4a4a6a;
+            --text-muted: #7a7a9a;
+            --border-color: rgba(0, 180, 160, 0.12);
+            --shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 20px 60px rgba(0, 180, 160, 0.15);
+            --gradient-hero: linear-gradient(165deg, #e6faf7 0%, #ffffff 70%);
+            --gradient-btn: linear-gradient(135deg, #00B4A0, #008C7A);
+            --gradient-accent: linear-gradient(135deg, #00B4A0, #00D4C0);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --teal: #00B4A0;
+            --teal-dark: #008C7A;
+            --teal-light: #d4f5f0;
+            --teal-glow: rgba(0, 180, 160, 0.3);
+            --shadow-md: 0 12px 48px rgba(0, 180, 160, 0.15);
+            /*МАССИВ*/
+--logo: var(--logo-url);
+--team-photo: var(--team-photo-url);
+--staff-1: var(--staff-photo-1);
+--staff-2: var(--staff-photo-2);
+--staff-3: var(--staff-photo-3);
+--staff-4: var(--staff-photo-4);
+--staff-5: var(--staff-photo-5);
+--staff-6: var(--staff-photo-6);
+--staff-7: var(--staff-photo-7);
+--staff-8: var(--staff-photo-8);
+            
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0a0a1a;
+            --bg-secondary: #12122a;
+            --bg-card: rgba(20, 20, 50, 0.8);
+            --bg-glass: rgba(20, 20, 50, 0.4);
+            --text-primary: #f0f0ff;
+            --text-secondary: #b0b0d0;
+            --text-muted: #7a7a9a;
+            --border-color: rgba(0, 180, 160, 0.2);
+            --shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 20px 60px rgba(0, 180, 160, 0.2);
+            --gradient-hero: linear-gradient(165deg, #0a0a2a 0%, #12122a 50%, #0a0a1a 100%);
+            --gradient-btn: linear-gradient(135deg, #00B4A0, #00D4C0);
+            --gradient-accent: linear-gradient(135deg, #00D4C0, #00B4A0);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --teal-glow: rgba(0, 180, 160, 0.15);
+            --teal-light: rgba(0, 180, 160, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 80px 0; transition: background 0.4s ease; }
+        .section-label {
+            display: inline-block;
+            background: var(--teal-light);
+            color: var(--teal-dark);
+            font-weight: 700;
+            font-size: 12px;
+            padding: 6px 20px;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            border: 1px solid rgba(0, 180, 160, 0.15);
+            transition: background 0.4s ease;
+        }
+        
+        
+        }
+       .team-photo-5 { background-image: var(--staff-5); }
+.team-photo-6 { background-image: var(--staff-6); }
+.team-photo-7 { background-image: var(--staff-7); }
+.team-photo-8 { background-image: var(--staff-8); }
+        }
+        
+        .section-title {
+            font-size: 44px;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+        .section-title span {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-sub {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto 48px;
+            text-align: center;
+            line-height: 1.7;
+            transition: color 0.4s ease;
+        }
+        .text-center { text-align: center; }
+
+        .btn {
+            display: inline-block;
+            background: var(--gradient-btn);
+            color: #fff !important;
+            padding: 14px 40px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(0, 180, 160, 0.3);
+            letter-spacing: 0.2px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg) translateX(-100%);
+            transition: 0.6s;
+        }
+        .btn:hover::after { transform: rotate(45deg) translateX(100%); }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 14px 44px rgba(0, 180, 160, 0.4);
+        }
+        .btn-outline {
+            background: transparent !important;
+            color: var(--teal) !important;
+            border: 2px solid var(--teal);
+            box-shadow: none;
+        }
+        .btn-outline::after { display: none; }
+        .btn-outline:hover {
+            background: var(--teal) !important;
+            color: #fff !important;
+            box-shadow: 0 8px 32px rgba(0, 180, 160, 0.3);
+        }
+
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 60px;
+            padding: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+            width: 64px;
+            height: 32px;
+        }
+        .theme-toggle:hover { border-color: var(--teal); }
+        .theme-toggle .toggle-track {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gradient-btn);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #fff;
+        }
+        [data-theme="dark"] .theme-toggle .toggle-track { transform: translateX(32px); }
+        .theme-toggle .toggle-icon { font-size: 14px; line-height: 1; }
+
+        /* ================================================================ */
+        /* ШАПКА                                                            */
+        /* ================================================================ */
+        header {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.4s ease, border-color 0.4s ease;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-image: var(--logo);
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 16px rgba(0, 180, 160, 0.3);
+        }
+        .logo-text {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            transition: color 0.4s ease;
+        }
+        .logo-text span {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--gradient-accent);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        nav a:hover { color: var(--teal); }
+        nav a:hover::after { width: 100%; }
+
+        /* ================================================================ */
+        /* ГЕРОЙ — СЛАЙДЕР НА ФОНЕ                                         */
+        /* ================================================================ */
+        .hero {
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            transition: background 0.4s ease;
+        }
+        
+        /* Слайдер на фоне */
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .hero-slider .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+        }
+        .hero-slider .slide.active {
+            opacity: 1;
+        }
+        
+        /* Затемнение для читаемости текста */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 80vh;
+            width: 100%;
+        }
+        
+        /* Заголовок — вверху */
+        .hero-top {
+            padding-top: 20px;
+        }
+        .hero-top .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 180, 160, 0.2);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hero-top h1 {
+            font-size: 60px;
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            color: #fff;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+        }
+        .hero-top h1 span {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+        }
+        
+        /* Текст + кнопки — внизу */
+        .hero-bottom {
+            padding-bottom: 40px;
+        }
+        .hero-bottom p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 520px;
+            margin-bottom: 28px;
+            line-height: 1.7;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .hero-buttons .btn {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .hero-buttons .btn-outline {
+            background: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(8px);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: #fff !important;
+        }
+        .hero-buttons .btn-outline:hover {
+            background: var(--teal) !important;
+            border-color: var(--teal);
+        }
+        
+        /* Прыгающая стрелка */
+        .scroll-down {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 32px;
+            animation: bounceArrow 2s ease-in-out infinite;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+        .scroll-down:hover {
+            color: #fff;
+        }
+        @keyframes bounceArrow {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(12px); }
+        }
+
+        /* ================================================================ */
+        /* БЛОК "О НАС" С ВИДЕО                                            */
+        /* ================================================================ */
+        .about-video-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+            background: var(--bg-secondary);
+        }
+        .about-video-wrap iframe {
+            width: 100%;
+            display: block;
+            border: none;
+            aspect-ratio: 16 / 9;
+            background: var(--bg-secondary);
+        }
+        .about-text-block {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-align: center;
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            transition: color 0.4s ease;
+        }
+
+        /* ================================================================ */
+        /* НАПРАВЛЕНИЯ                                                      */
+        /* ================================================================ */
+        .directions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+        .dir-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 32px 20px 28px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: default;
+            box-shadow: var(--shadow);
+        }
+        .dir-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--teal);
+            box-shadow: var(--shadow-hover);
+        }
+        .dir-card .icon { font-size: 40px; display: block; margin-bottom: 12px; }
+        .dir-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+        .dir-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            transition: color 0.4s ease;
+        }
+
+        /* ================================================================ */
+        /* ПРЕИМУЩЕСТВА                                                     */
+        /* ================================================================ */
+        .benefits {
+            background: var(--bg-secondary);
+            transition: background 0.4s ease;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+        }
+        .benefit-item {
+            text-align: center;
+            padding: 28px 20px;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow);
+        }
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--teal);
+            box-shadow: var(--shadow-hover);
+        }
+        .benefit-item .num {
+            font-size: 48px;
+            font-weight: 900;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.3;
+            line-height: 1;
+        }
+        .benefit-item .ben-icon { font-size: 36px; display: block; margin: -10px 0 4px; }
+        .benefit-item h4 {
+            font-size: 19px;
+            font-weight: 700;
+            margin: 4px 0 4px;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+        .benefit-item p {
+            font-size: 14px;
+            color: var(--text-muted);
+            transition: color 0.4s ease;
+        }
+
+        /* ================================================================ */
+        /* КОМАНДА                                                          */
+        /* ================================================================ */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+        .team-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 24px 18px 22px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow);
+        }
+        .team-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--teal);
+            box-shadow: var(--shadow-hover);
+        }
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            color: var(--text-muted);
+            overflow: hidden;
+            border: 3px solid var(--teal-light);
+            transition: all 0.4s ease;
+            background-size: cover;
+            background-position: center;
+        }
+        .team-photo-1 { background-image: var(--staff-1); }
+        .team-photo-2 { background-image: var(--staff-2); }
+        .team-photo-3 { background-image: var(--staff-3); }
+        .team-photo-4 { background-image: var(--staff-4); }
+        
+        .team-card h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 2px;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+        .team-card .role {
+            font-size: 13px;
+            color: var(--teal);
+            font-weight: 600;
+        }
+        .team-card .desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            transition: color 0.4s ease;
+        }
+        .team-group-photo {
+            border-radius: 20px;
+            background: var(--bg-secondary);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 2px dashed var(--border-color);
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            transition: all 0.4s ease;
+            background-image: var(--team-photo);
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ================================================================ */
+        /* ПРАЙС                                                            */
+        /* ================================================================ */
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 14px;
+        }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 22px;
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow);
+        }
+        .price-item:hover {
+            border-color: var(--teal);
+            transform: translateX(6px);
+            box-shadow: var(--shadow-hover);
+        }
+        .price-item .service {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+        .price-item .cost {
+            font-weight: 800;
+            font-size: 17px;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+        }
+        .price-item .cost-old {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+        .price-note {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: var(--text-muted);
+            transition: color 0.4s ease;
+        }
+        .price-note span { color: var(--teal); font-weight: 600; }
+
+        /* ================================================================ */
+        /* ОТЗЫВЫ                                                           */
+        /* ================================================================ */
+        .reviews-container { max-width: 800px; margin: 0 auto; }
+        .reviews-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+            min-height: 60px;
+        }
+        .review-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 24px 30px;
+            border: 1px solid var(--border-color);
+            animation: fadeIn 0.5s ease;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+        }
+        .review-card:hover {
+            border-color: var(--teal);
+            box-shadow: var(--shadow-hover);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .review-card .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+        .review-card .review-author {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+        .review-card .review-date {
+            font-size: 13px;
+            color: var(--text-muted);
+            transition: color 0.4s ease;
+        }
+        .review-card .review-stars {
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: #FFB800;
+            margin-bottom: 4px;
+        }
+        .review-card .review-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            transition: color 0.4s ease;
+        }
+        .reviews-empty {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            border: 2px dashed var(--border-color);
+            color: var(--text-muted);
+            transition: all 0.4s ease;
+        }
+        .reviews-empty .empty-icon { font-size: 44px; display: block; margin-bottom: 6px; }
+        .reviews-empty strong { color: var(--text-primary); transition: color 0.4s ease; }
+
+        .review-form-wrap {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 36px 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+        }
+        .review-form-wrap h4 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            text-align: center;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+        .review-form-wrap .form-sub {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 15px;
+            transition: color 0.4s ease;
+        }
+        .review-form-wrap .form-group { margin-bottom: 16px; }
+        .review-form-wrap .form-group label {
+            font-weight: 600;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 4px;
+            color: var(--text-secondary);
+            transition: color 0.4s ease;
+        }
+        .review-form-wrap .form-group input,
+        .review-form-wrap .form-group textarea {
+            width: 100%;
+            padding: 12px 18px;
+            border: 2px solid var(--border-color);
+            border-radius: 14px;
+            font-size: 15px;
+            font-family: inherit;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        .review-form-wrap .form-group input:focus,
+        .review-form-wrap .form-group textarea:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 4px var(--teal-glow);
+        }
+        .review-form-wrap .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 8px;
+            margin: 6px 0 4px;
+        }
+        .star-rating input { display: none; }
+        .star-rating label {
+            font-size: 34px;
+            color: #dce2e8;
+            cursor: pointer;
+            transition: color 0.2s, transform 0.15s;
+            user-select: none;
+        }
+        .star-rating label:hover,
+        .star-rating label:hover~label,
+        .star-rating input:checked~label { color: #FFB800; }
+        .star-rating label:hover { transform: scale(1.15); }
+        .star-rating input:checked~label { color: #FFB800; }
+        .review-form-wrap .btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        /* ================================================================ */
+        /* ФОРМА ЗАПИСИ                                                     */
+        /* ================================================================ */
+        .form-wrap {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 44px 48px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            max-width: 540px;
+            margin: 0 auto;
+            transition: all 0.4s ease;
+        }
+        .form-wrap h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 4px;
+            text-align: center;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+        .form-wrap .form-sub {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 15px;
+            transition: color 0.4s ease;
+        }
+        .form-wrap .form-group { margin-bottom: 16px; }
+        .form-wrap .form-group label {
+            font-weight: 600;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 4px;
+            color: var(--text-secondary);
+            transition: color 0.4s ease;
+        }
+        .form-wrap .form-group input,
+        .form-wrap .form-group textarea {
+            width: 100%;
+            padding: 12px 18px;
+            border: 2px solid var(--border-color);
+            border-radius: 14px;
+            font-size: 15px;
+            font-family: inherit;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        .form-wrap .form-group input:focus,
+        .form-wrap .form-group textarea:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 4px var(--teal-glow);
+        }
+        .form-wrap .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .form-wrap .btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        /* ================================================================ */
+        /* ФУТЕР                                                            */
+        /* ================================================================ */
+        #contacts { scroll-margin-top: 80px; }
+        footer {  
+            background-color: #FFE4B5;
+            color: var(--text-secondary);
+            padding: 56px 0 32px;
+            margin-top: 20px;
+            border-top: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+        }
+        footer .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        footer h4 {
+            color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 14px;
+            letter-spacing: -0.2px;
+            transition: color 0.4s ease;
+        }
+        footer .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        footer .footer-logo .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-image: var(--logo);
+            background-size: cover;
+            background-position: center;
+        }
+        footer .footer-logo span {
+            color: var(--text-primary);
+            font-weight: 900;
+            font-size: 18px;
+            transition: color 0.4s ease;
+        }
+        footer .footer-logo span small {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 300;
+        }
+        footer .footer-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            transition: color 0.4s ease;
+        }
+        footer .footer-contacts p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            transition: color 0.4s ease;
+        }
+        footer .footer-contacts a {
+            color: var(--teal-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer .footer-contacts a:hover { color: var(--teal); }
+        footer .footer-contacts .phone {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            transition: color 0.4s ease;
+        }
+        footer .footer-social a {
+            display: inline-block;
+            background: var(--bg-primary);
+            padding: 8px 18px;
+            border-radius: 50px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 0 4px 8px 0;
+            border: 1px solid var(--border-color);
+        }
+        footer .footer-social a:hover {
+            background: var(--gradient-btn);
+            color: #fff;
+            border-color: var(--teal);
+        }
+        footer .footer-links a {
+            display: block;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            padding: 4px 0;
+            transition: all 0.3s ease;
+        }
+        footer .footer-links a:hover {
+            color: var(--teal);
+            padding-left: 8px;
+        }
+        footer .footer-bottom {
+            grid-column: 1 / -1;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--text-muted);
+            transition: all 0.4s ease;
+        }
+        footer .footer-bottom a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer .footer-bottom a:hover { color: var(--teal); }
+
+        /* ================================================================ */
+        /* АДАПТИВ                                                          */
+        /* ================================================================ */
+        @media (max-width: 992px) {
+            footer .container { grid-template-columns: 1fr 1fr; gap: 30px; }
+            .hero-top h1 { font-size: 44px; }
+        }
+        @media (max-width: 768px) {
+            .hero-top h1 { font-size: 30px; }
+            .hero-bottom p { font-size: 17px; }
+            .section-title { font-size: 30px; }
+            header .container { flex-direction: column; gap: 10px; }
+            nav { justify-content: center; gap: 14px; }
+            .hero { padding: 40px 0 60px; min-height: 90vh; }
+            .hero .container { min-height: 70vh; }
+            .hero-top { padding-top: 10px; }
+            .hero-bottom { padding-bottom: 20px; }
+            .form-wrap, .review-form-wrap { padding: 28px 18px; }
+            .review-card { padding: 18px 18px; }
+            footer .container { grid-template-columns: 1fr; text-align: center; }
+            footer .footer-logo { justify-content: center; }
+            footer .footer-bottom { flex-direction: column; text-align: center; }
+            .star-rating label { font-size: 28px; }
+            .price-grid { grid-template-columns: 1fr; }
+            .price-item { padding: 14px 18px; }
+            .price-item .service { font-size: 14px; }
+            .price-item .cost { font-size: 15px; }
+            .theme-toggle { width: 56px; height: 28px; }
+            .theme-toggle .toggle-track { width: 20px; height: 20px; font-size: 12px; }
+            [data-theme="dark"] .theme-toggle .toggle-track { transform: translateX(28px); }
+            .scroll-down { font-size: 24px; bottom: 16px; }
+        } /* АНИМАЦИЯ ДЛЯ КНОПКИ ЗАПИСИ В ХЕДЕРЕ=============================================================*/
+        @keyframes navBtnShine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}/* КОНЕЦ ЭТОГО БЛОКА================================================*/
+
+
+/* АНИМАЦИЯ ДЛЯ КНОПКИ ПЕРЕД ФУТЕРОМ ===================================*/
+
+@keyframes footerBtnShine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* КОНЕЦ ЭТОГО БЛОКА================================================*/
+        
+    </style>
+</head>
+<body>
+
+    <!-- ================================================================ -->
+    <!-- ШАПКА                                                            -->
+    <!-- ================================================================ -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo-wrap">
+                <div class="logo-circle"></div>
+                <div class="logo-text">НЕЙРО<span>ДВИЖ</span></div>
+            </a>
+            <div style="display:flex;align-items:center;gap:16px;">
+                <nav>
+                    <a href="#about">О нас</a>
+                    <a href="#directions">Направления</a>
+                    <a href="#prices">Цены</a>
+                    <a href="#team">Команда</a>
+                    <a href="#reviews">Отзывы</a>
+                   <a href="#contacts" style="
+    display: inline-block;
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 60px;
+    background: linear-gradient(135deg, #00B4A0, #008C7A, #00B4A0);
+    background-size: 300% 300%;
+    animation: navBtnShine 3s ease infinite;
+    box-shadow: 0 4px 20px rgba(0, 180, 160, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+">Записаться</a>
+                </nav>
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                    <div class="toggle-track" id="toggleTrack">
+                        <span class="toggle-icon" id="toggleIcon">☀️</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================================================================ -->
+    <!-- ГЕРОЙ — СЛАЙДЕР НА ФОНЕ                                         -->
+    <!-- ================================================================ -->
+    <section class="hero">
+        <!-- Слайдер -->
+        <div class="hero-slider" id="heroSlider">
+            <div class="slide active" style="background-image: var(--slide-1);"></div>
+            <div class="slide" style="background-image: var(--slide-2);"></div>
+            <div class="slide" style="background-image: var(--slide-3);"></div>
+            <div class="slide" style="background-image: var(--slide-4);"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container">
+            <!-- Верх: заголовок -->
+            <div class="hero-top">
+               
+                <h1>Развиваем мозг через <span>движение</span></h1>
+            </div>
+            
+            <!-- Низ: текст + кнопки -->
+            <div class="hero-bottom">
+                <p>
+                    Центр когнитивного развития «Нейродвиж» в Кирове.<br />
+                    Помогаем детям от 2 до 10 лет развивать память, внимание,
+                    речь и уверенность в себе.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contacts" class="btn">Записаться</a>
+                    <a href="#prices" class="btn btn-outline">Смотреть цены</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Прыгающая стрелка -->
+        <a href="#about" class="scroll-down">&#8595</a>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- БЛОК "О НАС" С ВИДЕО                                            -->
+    <!-- ================================================================ -->
+    <section class="section" id="about">
+        <div class="container text-center">
+            <span class="section-label">О нас</span>
+            <h2 class="section-title">Почему <span>«Нейродвиж»</span></h2>
+            <div class="about-text-block">
+                <p>
+                    Мы — команда профессионалов, которые помогают детям раскрыть свой потенциал
+                    через уникальную авторскую методику. В основе нашей работы — сочетание
+                    движения и когнитивных упражнений, которые развивают мозг и дарят
+                    детям уверенность в себе.
+                </p>
+            </div>
+            <div class="about-video-wrap">
+                <iframe 
+                    src="https://vk.com/video_ext.php?oid=-239351134&id=456239101&hd=1&autoplay=0"
+                    width="100%" 
+                    height="450" 
+                    frameborder="0" 
+                    allowfullscreen
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                    style="border:0; background:#000;"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- НАПРАВЛЕНИЯ                                                      -->
+    <!-- ================================================================ -->
+    <section class="section" id="directions">  
+        <div class="container text-center">
+            <span class="section-label">Что мы предлагаем</span>
+            <h2 class="section-title">Наши <span>направления</span></h2>
+            <p class="section-sub">Выбирайте то, что нужно вашему ребёнку</p>
+            <div class="directions-grid">
+                <div class="dir-card"> 
+                    <span class="icon">🧠</span>
+                    <h3>Сенсорная интеграция</h3>
+                    <p>Межполушарное развитие, координация, внимание</p>
+                </div>
+                <div class="dir-card">
+                    <span class="icon">👌️</span>
+                    <h3>Терапия рук </h3>
+                    <p>Вернем вашим пальцам подвижность</p>
+                </div>
+               
+                <div class="dir-card">
+                    <span class="icon">🤸</span>
+                    <h3>АФК</h3>
+                    <p>Движение + мозг, вестибулярный аппарат</p>
+                </div>
+                <div class="dir-card">
+                    <span class="icon">✏️</span>
+                    <h3>Подготовка к школе</h3>
+                    <p>Чтение, письмо, счёт, внимание, усидчивость</p>
+                </div>
+                <div class="dir-card">
+                    <span class="icon">🎯</span>
+                    <h3>Развитие внимания</h3>
+                    <p>Концентрация, усидчивость, самоконтроль</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ПРЕИМУЩЕСТВА                                                     -->
+    <!-- ================================================================ -->
+    <section class="section benefits">
+        <div class="container text-center">
+            <span class="section-label">Почему мы</span>
+            <h2 class="section-title">Создаём условия, в которых каждый <span>ребёнок раскрывается</span></h2>
+            <p class="section-sub">Мы заботимся о каждом маленьком ученике</p>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="ben-icon">🧬</span>
+                    <div class="num">01</div>
+                    <h4>Авторская методика</h4>
+                    <p>Разработана экспертами в области нейропсихологии и педагогики</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="ben-icon">🎯</span>
+                    <div class="num">02</div>
+                    <h4>Индивидуальный подход</h4>
+                    <p>Программа подбирается под особенности и темп развития ребёнка</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="ben-icon">🏡</span>
+                    <div class="num">03</div>
+                    <h4>Уютная атмосфера</h4>
+                    <p>Малочисленные группы, современные материалы, забота и внимание</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="ben-icon">📈</span>
+                    <div class="num">04</div>
+                    <h4>Видимый результат</h4>
+                    <p>Регулярная диагностика и отслеживание прогресса каждого ребёнка</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ПРАЙС                                                            -->
+    <!-- ================================================================ -->
+   <section class="section" id="prices">
+        <!-- Стили для неоновой подсветки синий-маджента -->
+        <style>
+            @keyframes blueMagentaGlow {
+                0% { 
+                    box-shadow: 0 0 12px rgba(0, 0, 255, 0.5), 0 0 4px rgba(0, 0, 255, 0.2); 
+                    border-color: rgba(0, 0, 255, 0.3) !important;
+                }
+                50% { 
+                    box-shadow: 0 0 16px rgba(255, 0, 255, 0.6), 0 0 6px rgba(255, 0, 255, 0.3); 
+                    border-color: rgba(255, 0, 255, 0.4) !important;
+                }
+                100% { 
+                    box-shadow: 0 0 12px rgba(0, 0, 255, 0.5), 0 0 4px rgba(0, 0, 255, 0.2); 
+                    border-color: rgba(0, 0, 255, 0.3) !important;
+                }
+            }
+
+            @keyframes gradientBgMove {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            
+            /* Акционная строчка: фон белый, вокруг — анимированное свечение */
+            .promo-row-glow {
+                background: #ffffff !important; /* Строчка строго белая */
+                position: relative;
+                z-index: 1;
+                border: 1px solid rgba(0, 0, 255, 0.2) !important;
+                animation: blueMagentaGlow 5s ease-in-out infinite; 
+                transition: transform 0.3s ease;
+            }
+
+            /* Эффект при наведении */
+            .promo-row-glow:hover {
+                transform: translateY(-2px);
+                z-index: 2;
+                box-shadow: 0 0 20px rgba(255, 0, 255, 0.7), 0 0 8px rgba(0, 0, 255, 0.4);
+            }
+
+            /* ТЕКСТ ЦЕНЫ СПРАВА ТОЖЕ ПЕРЕЛИВАЕТСЯ ГРАДИЕНТОМ */
+            .cost-gradient-text {
+                background: linear-gradient(135deg, #0000ff, #ff00ff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-weight: 800;
+                font-size: 1.15em;
+                display: inline-block;
+            }
+
+            /* ПЕРЕЛИВАЮЩИЙСЯ БЕЙДЖ "Акция -30% — ЦЕНА" */
+            .promo-badge-glow {
+                background: linear-gradient(-45deg, #0000ff, #ff00ff, #0000ff);
+                background-size: 200% auto;
+                animation: gradientBgMove 4s linear infinite;
+                color: #fff !important;
+                font-size: 11px;
+                font-weight: 700;
+                padding: 3px 10px;
+                border-radius: 20px;
+                margin-left: 10px;
+                display: inline-block;
+                vertical-align: middle;
+                letter-spacing: 0.5px;
+                box-shadow: 0 2px 6px rgba(0, 0, 255, 0.2);
+            }
+        </style>
+
+        <section class="section" id="prices">
+    <div class="container text-center">
+        <span class="section-label">Стоимость</span>
+        <h2 class="section-title">Наши <span>цены</span></h2>
+        <p class="section-sub">Выберите занятие, которое подходит именно вам</p>
+        
+        <div class="price-grid">
+            <!-- ===== КОНСУЛЬТАЦИИ ===== -->
+            <div class="price-item">
+                <span class="service">Консультация кинезиолога-реабилитолога (дети)</span>
+                <span class="cost">2 500 ₽</span>
+            </div>
+            <div class="price-item">
+                <span class="service">Консультация кинезиолога-реабилитолога (взрослые)</span>
+                <span class="cost">3 000 ₽</span>
+            </div>
+            <div class="price-item">
+                <span class="service">Консультация психолога (1 час)</span>
+                <span class="cost">3 500 ₽</span>
+            </div>
+
+            <!-- ===== АКЦИЯ 30% (свечение) ===== -->
+            <div class="price-item promo-row-glow">
+                <span class="service">Кистевой реабилитолог (1 ч сложн) <span class="promo-badge-glow">Акция -30% — 1 260 ₽</span></span>
+                <span class="cost">
+                    <span class="cost-old">1 800 ₽</span> <span class="cost-gradient-text">1 260 ₽</span>
+                </span>
+            </div>
+            <div class="price-item promo-row-glow">
+                <span class="service">Кистевой реабилитолог (30 мин) <span class="promo-badge-glow">Акция -30% — 700 ₽</span></span>
+                <span class="cost">
+                    <span class="cost-old">1 000 ₽</span> <span class="cost-gradient-text">700 ₽</span>
+                </span>
+            </div>
+            <div class="price-item promo-row-glow">
+                <span class="service">БОС (консультация, 30-40 мин) <span class="promo-badge-glow">Акция -30% — 1 050 ₽</span></span>
+                <span class="cost">
+                    <span class="cost-old">1 500 ₽</span> <span class="cost-gradient-text">1 050 ₽</span>
+                </span>
+            </div>
+            <div class="price-item promo-row-glow">
+                <span class="service">БОС курсом от 5 занятий (30 мин) <span class="promo-badge-glow">Акция -30% — 770 ₽</span></span>
+                <span class="cost">
+                    <span class="cost-old">1 100 ₽</span> <span class="cost-gradient-text">770 ₽</span>
+                </span>
+            </div>
+            <div class="price-item promo-row-glow">
+                <span class="service">Ритм (консультация) <span class="promo-badge-glow">Акция -30% — 1 050 ₽</span></span>
+                <span class="cost">
+                    <span class="cost-old">1 500 ₽</span> <span class="cost-gradient-text">1 050 ₽</span>
+                </span>
+            </div>
+            <div class="price-item promo-row-glow">
+                <span class="service">Ритм курсом от 5 занятий (30 мин) <span class="promo-badge-glow">Акция -30% — 770 ₽</span></span>
+                <span class="cost">
+                    <span class="cost-old">1 100 ₽</span> <span class="cost-gradient-text">770 ₽</span>
+                </span>
+            </div>
+            <div class="price-item promo-row-glow">
+                <span class="service">Занятие инд. по сенсорной интеграции (1 час) * <span class="promo-badge-glow">Акция -30% — 1 260 ₽</span></span>
+                <span class="cost">
+                    <span class="cost-old">1 800 ₽</span> <span class="cost-gradient-text">1 260 ₽</span>
+                </span>
+            </div>
+
+            <!-- ===== ЭКЗАРТА ===== -->
+            <div class="price-item">
+                <span class="service">Консультация Экзарта</span>
+                <span class="cost">2 300 ₽</span>
+            </div>
+            <div class="price-item">
+                <span class="service">Занятие Экзарта</span>
+                <span class="cost">1 500 ₽</span>
+            </div>
+
+            <!-- ===== ПИЛАТЕС (групповые) ===== -->
+            <div class="price-item">
+                <span class="service">Групповые занятия / Пилатес (1 занятие)</span>
+                <span class="cost">
+                    <span class="cost-old">1 000 ₽</span> 700 ₽
+                </span>
+            </div>
+            <div class="price-item">
+                <span class="service">Групповые занятия / Пилатес (4 занятия)</span>
+                <span class="cost">
+                    <span class="cost-old">850 ₽</span> 595 ₽
+                </span>
+            </div>
+            <div class="price-item">
+                <span class="service">Групповые занятия / Пилатес (8 занятий)</span>
+                <span class="cost">
+                    <span class="cost-old">800 ₽</span> 560 ₽
+                </span>
+            </div>
+            <div class="price-item">
+                <span class="service">Групповые занятия / Пилатес (10 занятий) *</span>
+                <span class="cost">
+                    <span class="cost-old">750 ₽</span> 525 ₽
+                </span>
+            </div>
+            <div class="price-item">
+                <span class="service">Групповые занятия / Пилатес (12 занятий)</span>
+                <span class="cost">
+                    <span class="cost-old">700 ₽</span> 490 ₽
+                </span>
+            </div>
+
+            <!-- ===== ЙОГА (НОВОЕ) ===== -->
+            <div class="price-item">
+                <span class="service"> Йога (групповое)</span>
+                <span class="cost">800–1 000 ₽</span>
+            </div>
+            <div class="price-item">
+                <span class="service"> Йога для беременных (групповое)</span>
+                <span class="cost">800–1 000 ₽</span>
+            </div>
+            <div class="price-item">
+                <span class="service"> Йога мама + малыш (групповое)</span>
+                <span class="cost">800–1 000 ₽</span>
+            </div>
+            <div class="price-item">
+                <span class="service"> Индивидуальная йога</span>
+                <span class="cost">2 500 ₽</span>
+            </div>
+        </div>
+        
+        <!-- ===== НОВОЕ ПРИМЕЧАНИЕ (СО ЗВЁЗДОЧКОЙ) ===== -->
+        <div style="
+            max-width: 820px;
+            margin: 24px auto 0;
+            padding: 18px 28px;
+            background: rgba(0, 180, 160, 0.07);
+            border-radius: 16px;
+            border-left: 4px solid #00B4A0;
+            text-align: left;
+        ">
+            <p style="
+                font-size: 14px;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin: 0 0 6px 0;
+                transition: color 0.4s ease;
+            ">
+                <span style="color: #FF6B6B; font-weight: 700;">*</span> Цены в прайсе не являются окончательными 
+                и рассчитываются индивидуально в зависимости от сложности услуги, 
+                длительности занятия и особенностей клиента.
+            </p>
+            <p style="
+                font-size: 14px;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin: 0;
+                transition: color 0.4s ease;
+            ">
+                <span style="color: #00B4A0; font-weight: 700;">✓</span> Актуальную стоимость уточняйте по телефону. 
+                Действуют скидки при покупке абонемента.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- ================================================================ -->
+    <!-- КОМАНДА                                                          -->
+    <!-- ================================================================ -->
+    <section class="section" id="team">
+        <div class="container text-center">
+            <span class="section-label">Наши специалисты</span>
+            <h2 class="section-title">Профессионалы, которые <span>любят своё дело</span></h2>
+            <p class="section-sub">Вкладываем душу в каждого ребёнка</p>
+            <div class="team-grid">
+    <div class="team-card">
+        <div class="team-photo team-photo-1"></div>
+        <h4>Анастасия Голубева</h4>
+        <div class="role">психолог</div>
+        <div class="desc">Стаж 2 года</div>
+    </div>
+    <div class="team-card">
+        <div class="team-photo team-photo-2"></div>
+        <h4>Марина Сырчина</h4>
+        <div class="role">нейропсихолог</div>
+        <div class="desc">Стаж 20 лет</div>
+    </div>
+    <div class="team-card">
+        <div class="team-photo team-photo-3"></div>
+        <h4>Людмила Воронова</h4>
+        <div class="role">Амбассадор</div>
+    </div>
+    <div class="team-card">
+        <div class="team-photo team-photo-4"></div>
+        <h4>Юлия Фалалеева</h4>
+        <div class="role">Психолог</div>
+        <div class="desc">Стаж 22 года</div>
+    </div>
+   <div class="team-card">
+    <div class="team-photo" style="background-image: url('https://sun9-8.vkuserphoto.ru/s/v1/ig2/ZVrpJP6dzehLb2Z4h7R0gMFmVxezViVpXoMrbXcUF8ZUJrJ0xxWJPFQia9VzfVfKznXvHSppLCzC00GMW3VmBXKM.jpg?quality=95&as=32x41,48x62,72x93,108x139,160x206,240x309,360x463,480x617,500x643&from=bu&u=G3mikeniePMYUKcCtBMpBQ7azu74O2NxV5_ceoaXt8Q&cs=500x0');"></div>
+    <h4>Елена Болдырева</h4>
+    <div class="role">специалист по АФК,Экзарте и пилатесу для мам</div>
+    <div class="desc">Стаж 16 лет</div>
+</div>
+    <div class="team-card">
+        <div class="team-photo team-photo-6"></div>
+        <h4>Татьяна Вахрушева</h4>
+        <div class="role">Кистевой терапевт,реабилитолог</div>
+        <div class="desc">Стаж 17 лет</div>
+    </div>
+    <div class="team-card">
+        <div class="team-photo team-photo-7"></div>
+        <h4>Анна Костина</h4>
+        <div class="role">Кинезиолог,Создатель центра</div>
+        <div class="desc">Стаж 23 года</div>
+    </div>
+    <div class="team-card">
+        <div class="team-photo team-photo-8"></div>
+        <h4>Анна Кутергина</h4>
+        <div class="role">Создатель центра</div>
+    </div>
+</div>
+            <div class="team-group-photo"></div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ОТЗЫВЫ                                                           -->
+    <!-- ================================================================ -->
+    <section class="section" id="reviews">
+        <div class="container text-center">
+            <span class="section-label">Мнения родителей</span>
+            <h2 class="section-title">Отзывы <span>наших клиентов</span></h2>
+            <p class="section-sub">Что говорят о нас те, кто уже доверил нам своего ребёнка</p>
+            <div class="reviews-container">
+                <div class="reviews-list" id="reviewsList"></div>
+                <div class="review-form-wrap">
+                    <h4>✍️ Оставить отзыв</h4>
+                    <p class="form-sub">Поделитесь впечатлениями о нашем центре</p>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="reviewName">Ваше имя</label>
+                            <input type="text" id="reviewName" placeholder="Например, Елена" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Оценка</label>
+                            <div class="star-rating" id="starRating">
+                                <input type="radio" id="star5" name="rating" value="5" />
+                                <label for="star5" title="5 звёзд">★</label>
+                                <input type="radio" id="star4" name="rating" value="4" />
+                                <label for="star4" title="4 звезды">★</label>
+                                <input type="radio" id="star3" name="rating" value="3" />
+                                <label for="star3" title="3 звезды">★</label>
+                                <input type="radio" id="star2" name="rating" value="2" />
+                                <label for="star2" title="2 звезды">★</label>
+                                <input type="radio" id="star1" name="rating" value="1" />
+                                <label for="star1" title="1 звезда">★</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewText">Текст отзыва</label>
+                            <textarea id="reviewText" placeholder="Что вам понравилось? Что бы вы хотели отметить?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Отправить отзыв</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- ФОРМА ЗАПИСИ                                                     -->
+    <!-- ================================================================ -->
+   <section class="section" style="padding-top:0;">
+    <div class="container text-center">
+        <span class="section-label">Запись</span>
+        <h2 class="section-title">Запишитесь на <span>пробное занятие</span></h2>
+        <p class="section-sub">Оставьте сообщение — и мы свяжемся с вами в ближайшее время</p>
+        <div style="margin-top: 40px;">
+            <a href="https://vk.ru/im?sel=-239351134" target="_blank" style="
+                display: inline-block;
+                padding: 18px 50px;
+                font-size: 20px;
+                font-weight: 800;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 60px;
+                background: linear-gradient(135deg, #FF6B6B, #FFD93D, #00B4A0, #FF6B6B);
+                background-size: 400% 400%;
+                animation: footerBtnShine 2s ease infinite;
+                box-shadow: 0 8px 40px rgba(255, 107, 107, 0.3), 0 8px 40px rgba(255, 217, 61, 0.2), 0 8px 40px rgba(0, 180, 160, 0.2);
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                cursor: pointer;
+            ">
+                ✨ Записаться сейчас
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- ================================================================ -->
+    <!-- ФУТЕР                                                            -->
+    <!-- ================================================================ -->
+    <footer id="contacts">
+        <div class="container">
+            <div>
+                <div class="footer-logo">
+                    <div class="logo-circle"></div>
+                    <span>НЕЙРО<small>ДВИЖ</small></span>
+                </div>
+                <div class="footer-desc">
+                    Центр когнитивного развития детей в Кирове.<br />
+                    Помогаем раскрыть потенциал каждого ребёнка.
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <h4>📞 Контакты</h4>
+                <p class="phone">89005257035</p>
+                <p>г. Киров, ул. Козулева д.5</p>
+                <p>Ежедневно 09:00 – 20:00</p>
+            </div>
+            <div class="footer-social">
+                <h4>🌐 Мы в соцсетях</h4>
+                <a href="https://vk.ru/club239351134" target="_blank"> ВКонтакте</a>
+            </div>
+            <div class="footer-links">
+                <a href="#about">О нас</a>
+                <a href="#directions">Направления</a>
+                <a href="#prices">Цены</a>
+                <a href="#team">Команда</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contacts">Записаться</a>  
+            </div>
+            <div class="footer-bottom">
+    <span>© 2026 Нейродвиж. Все права защищены.</span>
+    <span>© Вахрушев И.Г. 2026 г.</span>
+    <span onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="
+        display: inline-block;
+        padding: 8px 20px;
+        background: linear-gradient(135deg, #00B4A0, #008C7A);
+        color: #fff;
+        border-radius: 60px;
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 180, 160, 0.3);
+        user-select: none;
+    " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 30px rgba(255, 255, 255, 1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,180,160,0.3)';">↑ Вверх</span>
+</div>
+    </footer>
+
+    <!-- ================================================================ -->
+    <!-- JAVASCRIPT                                                       -->
+    <!-- ================================================================ -->
+    <script>
+        // === ТЕМА ===
+        (function() {
+            const toggle = document.getElementById('themeToggle');
+            const icon = document.getElementById('toggleIcon');
+            const html = document.documentElement;
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                html.setAttribute('data-theme', savedTheme);
+                icon.textContent = savedTheme === 'light' ? '☀️' : '🌙';
+            }
+            toggle.addEventListener('click', function() {
+                const current = html.getAttribute('data-theme');
+                const next = current === 'light' ? 'dark' : 'light';
+                html.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+                icon.textContent = next === 'light' ? '☀️' : '🌙';
+            });
+        })();
+
+        // === СЛАЙДЕР В ГЕРОЕ ===
+        (function() {
+            const slides = document.querySelectorAll('.hero-slider .slide');
+            let current = 0;
+            let interval;
+            
+            function showSlide(index) {
+                slides.forEach((s, i) => {
+                    s.classList.toggle('active', i === index);
+                });
+            }
+            
+            function nextSlide() {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            }
+            
+            function startSlider() {
+                if (interval) clearInterval(interval);
+                interval = setInterval(nextSlide, 4000);
+            }
+            
+            if (slides.length > 1) {
+                startSlider();
+                // При наведении пауза
+                const slider = document.getElementById('heroSlider');
+                slider.addEventListener('mouseenter', () => clearInterval(interval));
+                slider.addEventListener('mouseleave', startSlider);
+            }
+        })();
+
+        // === ОТЗЫВЫ ===
+        (function() {
+            'use strict';
+            const STORAGE_KEY = 'neirodvizh_reviews';
+            function getReviews() {
+                try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } 
+                catch { return []; }
+            }
+            function saveReviews(reviews) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+            }
+            function formatDate(date) {
+                const d = new Date(date);
+                return String(d.getDate()).padStart(2,'0') + '.' + 
+                       String(d.getMonth()+1).padStart(2,'0') + '.' + 
+                       d.getFullYear();
+            }
+            function getStarsHTML(rating) {
+                let html = '';
+                for (let i = 1; i <= 5; i++) {
+                    html += i <= rating ? '⭐' : '☆';
+                }
+                return html;
+            }
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+            function renderReviews() {
+                const container = document.getElementById('reviewsList');
+                const reviews = getReviews();
+                if (reviews.length === 0) {
+                    container.innerHTML = `
+                        <div class="reviews-empty">
+                            <span class="empty-icon">💬</span>
+                            <strong>Здесь пока ничего нет</strong><br />
+                            Оставьте первый отзыв о нашем центре!
+                        </div>
+                    `;
+                    return;
+                }
+                let html = '';
+                [...reviews].reverse().forEach(function(review) {
+                    html += `
+                        <div class="review-card">
+                            <div class="review-header">
+                                <span class="review-author">${escapeHtml(review.author)}</span>
+                                <span class="review-date">${formatDate(review.date)}</span>
+                            </div>
+                            <div class="review-stars">${getStarsHTML(review.rating)}</div>
+                            <div class="review-text">${escapeHtml(review.text)}</div>
+                        </div>
+                    `;
+                });
+                container.innerHTML = html;
+            }
+            function addReview(author, rating, text) {
+                const reviews = getReviews();
+                reviews.push({ author: author.trim(), rating: parseInt(rating,10), text: text.trim(), date: new Date().toISOString() });
+                saveReviews(reviews);
+                renderReviews();
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                renderReviews();
+                document.getElementById('reviewForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('reviewName').value.trim();
+                    const rating = document.querySelector('input[name="rating"]:checked');
+                    const text = document.getElementById('reviewText').value.trim();
+                    if (!name) { alert('Укажите имя.'); return; }
+                    if (!rating) { alert('Поставьте оценку.'); return; }
+                    if (!text) { alert('Напишите отзыв.'); return; }
+                    addReview(name, rating.value, text);
+                    document.getElementById('reviewName').value = '';
+                    document.getElementById('reviewText').value = '';
+                    if (rating) rating.checked = false;
+                    alert('Спасибо за отзыв!');
+                });
+            });
+        })();
+    </script>
+    <script>
+    (function() {
+        const slider = document.getElementById('heroSlider');
+        const slides = slider.querySelectorAll('.slide');
+        let current = 0;
+        let interval;
+        const dotsContainer = document.createElement('div');
+        dotsContainer.style.cssText = `
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        `;
+        slider.parentElement.appendChild(dotsContainer);
+   
+        // Создаём точки
+        const dots = [];
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.style.cssText = `
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 2px solid rgba(255,255,255,0.6);
+                background: ${i === 0 ? '#00B4A0' : 'transparent'};
+                cursor: pointer;
+                transition: all 0.3s ease;
+                padding: 0;
+            `;
+            dot.setAttribute('aria-label', `Слайд ${i+1}`);
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+            dots.push(dot);
+        });
+
+        function goToSlide(index) {
+            if (index === current) return;
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+            });
+            dots.forEach((d, i) => {
+                d.style.background = i === index ? '#00B4A0' : 'transparent';
+            });
+            current = index;
+        }
+
+        function nextSlide() {
+            goToSlide((current + 1) % slides.length);
+        }
+
+        function startAutoPlay() {
+            if (interval) clearInterval(interval);
+            interval = setInterval(nextSlide, 4000);
+        }
+
+        // Свайп/клики для ручного переключения
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        slider.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        slider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        slider.addEventListener('mousedown', (e) => {
+            touchStartX = e.screenX;
+        });
+
+        slider.addEventListener('mouseup', (e) => {
+            touchEndX = e.screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    goToSlide((current + 1) % slides.length);
+                } else {
+                    goToSlide((current - 1 + slides.length) % slides.length);
+                }
+                startAutoPlay();
+            }
+        }
+
+        // Стрелки вправо/влево (добавим их тоже)
+        const arrowLeft = document.createElement('button');
+        arrowLeft.innerHTML = '‹';
+        arrowLeft.style.cssText = `
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            border: none;
+            font-size: 40px;
+            padding: 10px 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+        `;  
+        arrowLeft.addEventListener('mouseenter', () => arrowLeft.style.background = 'rgba(0,0,0,0.6)');
+        arrowLeft.addEventListener('mouseleave', () => arrowLeft.style.background = 'rgba(0,0,0,0.3)');
+        arrowLeft.addEventListener('click', () => {
+            goToSlide((current - 1 + slides.length) % slides.length);
+            startAutoPlay();
+        });
+
+        const arrowRight = document.createElement('button');
+        arrowRight.innerHTML = '›';
+        arrowRight.style.cssText = `
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            border: none;
+            font-size: 40px;
+            padding: 10px 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+        `;
+        arrowRight.addEventListener('mouseenter', () => arrowRight.style.background = 'rgba(0,0,0,0.6)');
+        arrowRight.addEventListener('mouseleave', () => arrowRight.style.background = 'rgba(0,0,0,0.3)');
+        arrowRight.addEventListener('click', () => {
+            goToSlide((current + 1) % slides.length);
+            startAutoPlay();
+        });
+
+        slider.parentElement.appendChild(arrowLeft);
+        slider.parentElement.appendChild(arrowRight);
+
+        // Пауза при наведении на слайдер
+        slider.addEventListener('mouseenter', () => clearInterval(interval));
+        slider.addEventListener('mouseleave', startAutoPlay);
+
+        // Старт
+        goToSlide(0);
+        startAutoPlay();
+    })();
+</script>
+<!-- ================================================================ -->
+<!-- СКРИПТ - ЧИСТЫЙ IFRAME ВК С ТОТАЛЬНОЙ БЛОКИРОВКОЙ РЕКЛАМЫ      -->
+<!-- ================================================================ -->
+<script>
+    (function() {
+        'use strict';
+
+        // ID видео
+        const VIDEO_OWNER = '239351134';
+        const VIDEO_ID = '456239101';
+
+        // ================================================================
+        // 1. СОЗДАЁМ ЧИСТЫЙ IFRAME
+        // ================================================================
+        function createCleanIframe() {
+            const container = document.querySelector('.about-video-wrap');
+            if (!container) {
+                console.warn('⚠️ Контейнер .about-video-wrap не найден');
+                return;
+            }
+
+            // Очищаем контейнер
+            container.innerHTML = '';
+
+            // Создаём обёртку для iframe
+            const wrapper = document.createElement('div');
+            wrapper.style.cssText = `
+                position: relative;
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+                border-radius: 16px;
+                overflow: hidden;
+                background: #000;
+                box-shadow: 0 12px 48px rgba(0, 180, 160, 0.15);
+                border: 1px solid var(--border-color);
+            `;
+
+            // Создаём iframe
+            const iframe = document.createElement('iframe');
+            iframe.id = 'vk-clean-player';
+            iframe.src = `https://vk.com/video_ext.php?oid=-${VIDEO_OWNER}&id=${VIDEO_ID}&hd=1&autoplay=0&no_mobile=1&rel=0&show_comments=0&show_likes=0&show_share=0&disable_ads=1&m=0&referrer=0`;
+            iframe.width = '100%';
+            iframe.height = '450';
+            iframe.style.cssText = `
+                display: block;
+                border: none;
+                background: #000;
+                width: 100%;
+                height: 450px;
+                position: relative;
+                z-index: 1;
+                pointer-events: auto;
+            `;
+            iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
+            iframe.allowFullscreen = true;
+
+            wrapper.appendChild(iframe);
+            container.appendChild(wrapper);
+
+            console.log('✅ Чистый iframe создан');
+
+            // Запускаем блокировку рекламы
+            setTimeout(() => blockVkAds(iframe), 1000);
+            setTimeout(() => blockVkAds(iframe), 3000);
+            setInterval(() => blockVkAds(iframe), 2000);
+
+            return iframe;
+        }
+
+        // ================================================================
+        // 2. ТОТАЛЬНАЯ БЛОКИРОВКА РЕКЛАМЫ В IFRAME
+        // ================================================================
+        function blockVkAds(iframe) {
+            try {
+                const doc = iframe.contentDocument || iframe.contentWindow?.document;
+                if (!doc) return;
+
+                // ============================================================
+                // БЛОКИРУЕМ ВСЁ ЧЕРЕЗ CSS (внедряем стили в iframe)
+                // ============================================================
+                let style = doc.getElementById('vk-ads-blocker');
+                if (!style) {
+                    style = doc.createElement('style');
+                    style.id = 'vk-ads-blocker';
+                    style.textContent = `
+                        /* ========================================================== */
+                        /* ТОТАЛЬНАЯ БЛОКИРОВКА ВСЕХ ЭЛЕМЕНТОВ, КРОМЕ ВИДЕО          */
+                        /* ========================================================== */
+                        
+                        /* Блокируем всю рекламу */
+                        .ads_block, .ads, .advert, .ad, 
+                        [class*="ad"], [class*="banner"], [class*="promo"],
+                        [data-ads], [data-ad], #ads, #banner, #promo,
+                        .video_ads, .video_ad, .ad_container,
+                        .ad-overlay, .ad_overlay,
+                        .ui_ads, .ui_advert,
+                        
+                        /* Блокируем рекомендации */
+                        .video_recommendations, .recommendations, .video_suggestions,
+                        .suggestions, [class*="recommend"], [class*="suggest"],
+                        [class*="related"], #recommendations, #suggestions,
+                        .related_videos, .video_related,
+                        
+                        /* Блокируем кнопки соцсетей */
+                        .share_btns, .share_buttons, .social_buttons,
+                        [class*="share"], [class*="social"], [class*="like"], [class*="save"],
+                        .like_btn, .like_button, .share_btn,
+                        
+                        /* Блокируем оверлеи */
+                        .video_ads_overlay, .overlay_ads, .video_ad_overlay,
+                        [class*="overlay"], [class*="layer"],
+                        .ui_media_player_overlay,
+                        .ui_media_player_mobile_overlay,
+                        
+                        /* Блокируем попапы */
+                        .popup, .modal, .dialog, .toast,
+                        [class*="popup"], [class*="modal"], [class*="dialog"],
+                        
+                        /* Блокируем подсказки */
+                        .tooltip, .hint, .tip,
+                        [class*="tooltip"], [class*="hint"],
+                        
+                        /* Блокируем баннеры */
+                        .banner, .banner_container, .banner-wrapper,
+                        [class*="banner"],
+                        
+                        /* Блокируем все панели управления кроме видео */
+                        .ui_controls_panel:not(.video_player_controls),
+                        .controls_panel:not(.video-controls),
+                        
+                        /* Блокируем подписи */
+                        .caption, .title, .subtitle,
+                        .video_title, .video_description,
+                        
+                        /* Блокируем всё, что мешает */
+                        .ui_media_player_overlay,
+                        .ui_media_player_mobile_overlay,
+                        .ui_overlay,
+                        
+                        /* Скрываем всё лишнее */
+                        .ui_media_player > div:not(.video_player_controls) {
+                            display: none !important;
+                            opacity: 0 !important;
+                            pointer-events: none !important;
+                            visibility: hidden !important;
+                            height: 0 !important;
+                            width: 0 !important;
+                            overflow: hidden !important;
+                            position: absolute !important;
+                            clip: rect(0, 0, 0, 0) !important;
+                        }
+                        
+                        /* Оставляем только видео и управление */
+                        .video_player_controls,
+                        .video-controls,
+                        video {
+                            display: block !important;
+                            opacity: 1 !important;
+                            visibility: visible !important;
+                            pointer-events: auto !important;
+                            position: relative !important;
+                            height: auto !important;
+                            width: 100% !important;
+                            clip: auto !important;
+                        }
+                        
+                        /* Блокируем клики по рекламным зонам */
+                        .video_ad_container,
+                        .ad-container,
+                        [class*="ad-container"] {
+                            pointer-events: none !important;
+                            display: none !important;
+                        }
+                        
+                        /* Скрываем все изображения кроме видео */
+                        img:not([src*="video"]):not([src*="preview"]) {
+                            display: none !important;
+                        }
+                        
+                        /* Убираем все ссылки */
+                        a:not([href*="vk.com/video"]):not([href*="vkontakte.ru/video"]) {
+                            pointer-events: none !important;
+                            cursor: default !important;
+                        }
+                        
+                        /* Блокируем все iframe внутри (дополнительная реклама) */
+                        iframe:not(:first-child) {
+                            display: none !important;
+                            pointer-events: none !important;
+                        }
+                        
+                        /* Скрываем всё с позицией absolute/fixed (реклама) */
+                        *[style*="position: absolute"],
+                        *[style*="position: fixed"] {
+                            display: none !important;
+                            pointer-events: none !important;
+                        }
+                        
+                        /* Скрываем пустые блоки */
+                        div:empty {
+                            display: none !important;
+                        }
+                    `;
+                    doc.head.appendChild(style);
+                }
+
+                // ============================================================
+                // УДАЛЯЕМ ВСЕ РЕКЛАМНЫЕ ЭЛЕМЕНТЫ (ЧЕРЕЗ JS)
+                // ============================================================
+                const selectors = [
+                    '.ads_block', '.ads', '.advert', '.ad',
+                    '[class*="ad"]', '[class*="banner"]', '[class*="promo"]',
+                    '[data-ads]', '[data-ad]', '#ads', '#banner', '#promo',
+                    '.video_ads', '.video_ad', '.ad_container',
+                    '.video_recommendations', '.recommendations',
+                    '.share_btns', '.share_buttons', '.social_buttons',
+                    '[class*="share"]', '[class*="social"]', '[class*="like"]',
+                    '.video_ads_overlay', '.overlay_ads',
+                    '[class*="overlay"]', '[class*="layer"]',
+                    '.ui_media_player_overlay', '.ui_media_player_mobile_overlay',
+                    '.popup', '.modal', '.dialog', '.toast',
+                    '.banner', '.banner_container',
+                    '.ui_controls_panel', '.controls_panel',
+                    '.caption', '.title', '.subtitle',
+                    '.video_title', '.video_description'
+                ];
+
+                selectors.forEach(selector => {
+                    const elements = doc.querySelectorAll(selector);
+                    elements.forEach(el => {
+                        el.style.display = 'none';
+                        el.style.pointerEvents = 'none';
+                        el.style.visibility = 'hidden';
+                        el.style.opacity = '0';
+                        el.style.width = '0';
+                        el.style.height = '0';
+                        el.style.position = 'absolute';
+                        el.style.clip = 'rect(0, 0, 0, 0)';
+                        el.style.overflow = 'hidden';
+                    });
+                });
+
+                // Удаляем все абсолютные элементы (реклама)
+                const allElements = doc.querySelectorAll('*');
+                allElements.forEach(el => {
+                    const style = window.getComputedStyle(el);
+                    if (style.position === 'absolute' || style.position === 'fixed') {
+                        // Проверяем, не является ли это видео или контролами
+                        const isVideo = el.tagName === 'VIDEO' || 
+                                       el.classList.contains('video_player_controls') ||
+                                       el.classList.contains('video-controls');
+                        if (!isVideo && !el.closest('.video_player_controls')) {
+                            el.style.display = 'none';
+                            el.style.pointerEvents = 'none';
+                        }
+                    }
+                });
+
+                // ============================================================
+                // БЛОКИРУЕМ ВСЕ КЛИКИ ПО РЕКЛАМЕ
+                // ============================================================
+                const clickables = doc.querySelectorAll('a, button, [onclick]');
+                clickables.forEach(el => {
+                    // Проверяем, не является ли это управлением видео
+                    const isControl = el.closest('.video_player_controls') || 
+                                     el.closest('.video-controls') ||
+                                     el.closest('.vjs-control');
+                    if (!isControl) {
+                        el.style.pointerEvents = 'none';
+                        el.style.cursor = 'default';
+                        el.removeAttribute('onclick');
+                        el.removeEventListener('click', () => {});
+                    }
+                });
+
+                // ============================================================
+                // УДАЛЯЕМ ВСЕ ДОПОЛНИТЕЛЬНЫЕ IFRAME (РЕКЛАМА)
+                // ============================================================
+                const iframes = doc.querySelectorAll('iframe:not(:first-child)');
+                iframes.forEach(el => {
+                    el.style.display = 'none';
+                    el.style.pointerEvents = 'none';
+                });
+
+                console.log('🧹 Реклама заблокирована');
+
+            } catch (e) {
+                // Cross-origin ошибка - это нормально, значит iframe с другого домена
+                // Используем альтернативный метод через стили
+                if (e.message && e.message.includes('cross-origin')) {
+                    console.log('🔄 Использую альтернативный метод блокировки');
+                }
+            }
+        }
+
+        // ================================================================
+        // 3. ДОПОЛНИТЕЛЬНАЯ ЗАЩИТА - CSS В ОСНОВНОМ ДОКУМЕНТЕ
+        // ================================================================
+        function addProtectionCSS() {
+            const style = document.createElement('style');
+            style.textContent = `
+                /* Дополнительная маскировка iframe */
+                #vk-clean-player {
+                    position: relative;
+                }
+                
+                /* Маскируем нижнюю часть iframe (где реклама) */
+                .about-video-wrap {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 16px !important;
+                }
+                
+                /* Перекрываем возможную рекламу сверху */
+                .about-video-wrap::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 2;
+                    pointer-events: none;
+                    background: transparent;
+                }
+                
+                /* Скрываем правый нижний угол (кнопки ВК) */
+                .about-video-wrap::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 150px;
+                    height: 60px;
+                    z-index: 3;
+                    pointer-events: none;
+                    background: linear-gradient(to left, #000 0%, transparent 100%);
+                    border-radius: 0 0 16px 0;
+                }
+                
+                /* Для тёмной темы */
+                [data-theme="dark"] .about-video-wrap::after {
+                    background: linear-gradient(to left, #0a0a1a 0%, transparent 100%);
+                }
+                
+                /* Скрываем все возможные элементы внутри iframe через CSS */
+                #vk-clean-player {
+                    filter: brightness(1);
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // ================================================================
+        // 4. ЗАПУСК
+        // ================================================================
+        function init() {
+            addProtectionCSS();
+            const iframe = createCleanIframe();
+            
+            // Дополнительная очистка при взаимодействии
+            if (iframe) {
+                // При клике на iframe - чистим
+                iframe.addEventListener('load', () => {
+                    setTimeout(() => blockVkAds(iframe), 1000);
+                    setTimeout(() => blockVkAds(iframe), 3000);
+                });
+                
+                // Периодическая очистка
+                setInterval(() => blockVkAds(iframe), 3000);
+            }
+        }
+
+        // Ждём загрузку
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+
+        console.log('🛡️ Защита ВК плеера активирована!');
+    })();
+</script>
+<script>
+(function() {
+    function applyIroncladThemeFix() {
+        // 1. Автоматически определяем, активна ли сейчас темная тема на сайте
+        const isDark = document.body.classList.contains('dark') || 
+                       document.documentElement.classList.contains('dark') ||
+                       document.body.className.includes('dark') ||
+                       document.documentElement.className.includes('dark') ||
+                       document.body.hasAttribute('data-theme') && document.body.getAttribute('data-theme') === 'dark' ||
+                       document.documentElement.hasAttribute('data-theme') && document.documentElement.getAttribute('data-theme') === 'dark' ||
+                       window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // ==========================================
+        // БЛОК 1: ФИКС ДЛЯ СТРОК ПРАЙСА
+        // ==========================================
+        const promoRows = document.querySelectorAll('.price-item.promo-row-glow');
+        promoRows.forEach(row => {
+            const serviceText = row.querySelector('.service');
+            const oldCost = row.querySelector('.cost-old');
+
+            if (isDark) {
+                row.style.setProperty('background', '#111216', 'important');
+                row.style.setProperty('background-color', '#111216', 'important');
+                row.style.setProperty('background-image', 'none', 'important');
+                row.style.setProperty('border-color', 'rgba(255, 255, 255, 0.15)', 'important');
+                if (serviceText) serviceText.style.setProperty('color', '#ffffff', 'important');
+                if (oldCost) oldCost.style.setProperty('color', 'rgba(255, 255, 255, 0.4)', 'important');
+            } else {
+                row.style.removeProperty('background');
+                row.style.removeProperty('background-color');
+                row.style.removeProperty('background-image');
+                row.style.removeProperty('border-color');
+                if (serviceText) serviceText.style.removeProperty('color');
+                if (oldCost) oldCost.style.removeProperty('color');
+            }
+        });
+
+        // ==========================================
+        // БЛОК 2: ФИКС ДЛЯ ФУТЕРА
+        // ==========================================
+        // Ищем футер по тегу, классу и ID, чтобы точно его поймать
+        const footers = document.querySelectorAll('footer, .footer, #footer');
+        
+        footers.forEach(footer => {
+            // Ищем все текстовые элементы, ссылки, заголовки и абзацы внутри футера
+            const footerTexts = footer.querySelectorAll('p, span, a, h1, h2, h3, h4, h5, h6, li, div');
+
+            if (isDark) {
+                // ТЕМНАЯ ТЕМА ДЛЯ ФУТЕРА:
+                footer.style.setProperty('background', '#111216', 'important');      // Глубокий темный фон
+                footer.style.setProperty('background-color', '#111216', 'important');
+                footer.style.setProperty('background-image', 'none', 'important');     // Стираем светлые градиенты
+                footer.style.setProperty('border-top', '1px solid rgba(255, 255, 255, 0.1)', 'important'); // Аккуратная темная рамка сверху
+
+                // Делаем весь текст внутри футера белым/светлым, чтобы он не сливался
+                footerTexts.forEach(text => {
+                    // Если это ссылка, делаем её чуть ярче приглушенного текста
+                    if (text.tagName === 'A') {
+                        text.style.setProperty('color', '#34d399', 'important'); // Изумрудный/мятный цвет для ссылок (под стиль прайса)
+                    } else {
+                        text.style.setProperty('color', '#e5e7eb', 'important'); // Мягкий белый для обычного текста
+                    }
+                });
+            } else {
+                // СВЕТЛАЯ ТЕМА ДЛЯ ФУТЕРА: Полностью очищаем инлайн-стили, возвращая ваш оригинальный дизайн
+                footer.style.removeProperty('background');
+                footer.style.removeProperty('background-color');
+                footer.style.removeProperty('background-image');
+                footer.style.removeProperty('border-top');
+
+                footerTexts.forEach(text => {
+                    text.style.removeProperty('color');
+                });
+            }
+        });
+    }
+
+    // Запуск фикса при загрузке страницы
+    applyIroncladThemeFix();
+    document.addEventListener('DOMContentLoaded', applyIroncladThemeFix);
+
+    // Наблюдатель за переключением темы на сайте (срабатывает мгновенно)
+    const observer = new MutationObserver(() => {
+        applyIroncladThemeFix();
+    });
+
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'data-theme', 'theme'] });
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class', 'data-theme', 'theme'] });
+
+    // Дополнительный триггер на клики
+    document.addEventListener('click', () => {
+        setTimeout(applyIroncladThemeFix, 30);
+    });
+})();
+</script>
+
+</body>
+</html>
